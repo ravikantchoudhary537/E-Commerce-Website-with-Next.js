@@ -1,7 +1,13 @@
-import { Inter } from "next/font/google";
+import { Inter, Oswald, Urbanist } from 'next/font/google';
 import "./globals.css";
+// import Head from "next/head";
+import Header from './components/Header';
+import Footer from './components/Footer';
 
-const inter = Inter({ subsets: ["latin"] });
+// const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ['latin'] });
+const oswald = Oswald({ subsets: ['latin'] }); // Add this if you are using Oswald
+const urbanist = Urbanist({ subsets: ['latin'] }); // Add this if you are using Urbanist
 
 export const metadata = {
   title: "Create Next App",
@@ -11,7 +17,17 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
-    </html>
+    <head>
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
+      {/* If you have specific reasons to add manual links, you can do it here */}
+    </head>
+    <body className={` ${oswald.className} ${urbanist.className}  ` }>
+      <Header/>
+      {children}
+      <Footer/>
+     
+    </body>
+  </html>
   );
 }
