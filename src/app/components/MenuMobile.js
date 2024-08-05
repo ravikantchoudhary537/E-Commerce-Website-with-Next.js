@@ -17,7 +17,7 @@ const subMenuData = [
 ];
 const MenuMobile = ({ showCatMenu, setShowCatMenu, setMobileMenu }) => {
   return (
-    <li className="flex flex-col md:hidden fonr-bold absolute top-[50px] left-0 w-full h-[cal(100vh-50px)] bg-white border-t text-black">
+    <ul className="flex flex-col md:hidden fonr-bold absolute top-[50px] left-0 w-full h-[cal(100vh-50px)] bg-white border-t text-black">
       {data.map((item) => (
         <React.Fragment key={item.id}>
           {!!item?.subMenu ? (
@@ -62,7 +62,7 @@ const MenuMobile = ({ showCatMenu, setShowCatMenu, setMobileMenu }) => {
           )}
         </React.Fragment>
       ))}
-    </li>
+    </ul>
   );
 };
 
