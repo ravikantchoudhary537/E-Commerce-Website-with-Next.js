@@ -2,6 +2,5 @@
 
 
 # It is a E-commerce Shoe-store website with Next.js
-
-
-![Next js](./public/p1.png)
+![Shoe store](./public/webss1.png)
+![Shoe store](./public/webss2.png)
